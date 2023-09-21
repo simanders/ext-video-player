@@ -1,2 +1,2 @@
 # ext-video-player
-A JavaScript web application that lets user play Video files in a Browser tab.
+This JavaScript code implements a comprehensive video player interface with diverse functionalities. It enables users to control video playback, adjust volume, change playback speed, navigate through the video, and toggle between full screen and normal screen mode. Additionally, it supports drag-and-drop functionality for loading video files. The code leverages event listeners to respond to user interactions, enhancing the video-watching experience through a feature-rich and interactive interface.
