@@ -27,8 +27,10 @@ Contributions are welcome! If you'd like to improve this project or fix any issu
 
 ## Contributors
 
+- [simanders](https://github.com/simanders)
 - [arindal1](https://github.com/arindal1)
 
+<img src="https://avatars.githubusercontent.com/u/90633213?v=4" alt="Image" width="50" height="50" style="border-radius: 50%">
 <img src="https://avatars.githubusercontent.com/u/110285827?v=4" alt="Image" width="50" height="50" style="border-radius: 50%">
 
 
