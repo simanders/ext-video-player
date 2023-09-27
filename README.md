@@ -2,14 +2,6 @@
 
 This project implements a custom video player with various controls and interactions using HTML, CSS, and JavaScript. It provides functionalities like play, pause, volume control, progress tracking, playback speed adjustment, and full-screen mode.
 
-## Table of Contents
-
-- [Prerequisites](#prerequisites)
-- [Usage](#usage)
-- [Features](#features)
-- [Contributing](#contributing)
-- [License](#license)
-
 ## Prerequisites
 
 To use this video player, you need a modern web browser that supports HTML5 and related features for video playback.
@@ -33,9 +25,12 @@ To use this video player, you need a modern web browser that supports HTML5 and 
 
 Contributions are welcome! If you'd like to improve this project or fix any issues, please fork the repository and submit a pull request.
 
-## License
+## Contributors
 
-This project is licensed under the [MIT License](LICENSE).
+- [arindal1](https://github.com/arindal1)
+
+<img src="https://avatars.githubusercontent.com/u/110285827?v=4" alt="Image" width="50" height="50" style="border-radius: 50%">
+
 
 ---
 
