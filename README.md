@@ -33,5 +33,3 @@ Contributions are welcome! If you'd like to improve this project or fix any issu
 
 
 ---
-
-In this README.md, I've outlined the prerequisites, usage instructions, features of the video player, how to contribute, and the license information. Feel free to modify and tailor it to your project's specific needs.
