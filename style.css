@@ -28,8 +28,10 @@
     width: 100%;
   }
   .rotate-container {
-    top: 0;
-    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: fixed;
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.3);
@@ -49,9 +51,9 @@
   .video-container {
     width: 60%;
     position: absolute;
-    transform: translate(-50%, -50%);
     left: 50%;
     top: 50%;
+    transform: translate(-50%, -50%);
     box-shadow: 20px 30px 50px rgba(0, 0, 0, 0.2);
   }
   .controls {
@@ -185,6 +187,7 @@
     .video-container {
       width: 100%;
       margin: 0;
+      transform: none; /* Remove the translation for fullscreen */
     }
     .controls {
       position: absolute;
@@ -251,9 +254,9 @@
   .drop-zone.highlight {
     border-color: #007bff;
   }
+  
 
-
-.social-icons {
+  .social-icons {
     display: flex;
     gap: 10px; /* Adjust the gap between social icons */
     position: absolute;

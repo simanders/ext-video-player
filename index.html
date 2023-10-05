@@ -4,14 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Video Player</title>
     <link rel = "icon" href = "images/icon.png" type = "image/x-icon">
+    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+    <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -25,7 +28,7 @@
       <div class="video-container" id="video-container">
         <video id="my-video" preload="metadata">
           <source
-            src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+            src="images/r1-test.mp4"
             type="video/mp4"
           />
           Your browser does not support the video tag
@@ -84,7 +87,7 @@
                   <button onclick="setPlayback(2.0)">2</button>
                 </div>
               </div>
-
+              <!-- screen size -->
               <div id="size-screen">
                 <button id="screen-expand">
                   <i class="fa-solid fa-expand"></i>
@@ -98,14 +101,17 @@
         </div>
       </div>
     </div>
+    <div id="player"></div>
     <div class="drop-zone" id="dropZone">
         <p>Drag and drop a video file here to play</p>
       </div>
-    <div class="social-icons">
-        <a href="https://instagram.com" target="_blank"><img src="images/instagram.png" alt="instagram"></a>
-        <a href="https://github.com" target="_blank"><img src="images/github.png" alt="github"></a>
-        <a href="https://www.linkedin.com" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+      <div class="social-icons">
+        <a href="" target="_blank"><img src="images/instagram.png" alt="instagram"></a>
+        <a href="" target="_blank"><img src="images/github.png" alt="github"></a>
+        <a href="" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
       </div>
+    <!-- Script -->
     <script src="script.js"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
   </body>
 </html>
