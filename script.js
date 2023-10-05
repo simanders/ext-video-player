@@ -125,14 +125,21 @@ volumeRange.addEventListener("input", () => {
 screenExpand.addEventListener("click", () => {
   screenCompress.classList.remove("hide");
   screenExpand.classList.add("hide");
-  videoContainer
-    .requestFullscreen()
+  
+  // Request full screen and adjust styles
+  videoContainer.requestFullscreen()
+    .then(() => {
+      videoContainer.style.display = "flex";
+      videoContainer.style.justifyContent = "center";
+      videoContainer.style.alignItems = "center";
+    })
     .catch((err) => alert("Your device doesn't support full screen API"));
+  
   if (isTouchDevice) {
     let screenOrientation =
       screen.orientation || screen.mozOrientation || screen.msOrientation;
     if (screenOrientation.type == "portrait-primary") {
-      //update styling for fullscreen
+      // Update styling for fullscreen
       pauseVideo();
       rotateContainer.classList.remove("hide");
       const myTimeout = setTimeout(() => {
@@ -141,6 +148,7 @@ screenExpand.addEventListener("click", () => {
     }
   }
 });
+
 
 //if user presses escape the browser fire 'fullscreenchange' event
 document.addEventListener("fullscreenchange", exitHandler);
@@ -325,3 +333,30 @@ document.body.addEventListener("keydown", (event) => {
       }
     }
   });
+
+/*
+// Replace 'VIDEO_ID' with the actual YouTube video ID
+var videoId = 'h6Ol3eprKiw&pp=ygUNbmV2ZXIgZ2l2ZSB1cA%3D%3D';
+
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '360',
+    width: '640',
+    videoId: videoId,
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+
+function onPlayerStateChange(event) {
+  // Handle video state changes if needed
+}
+*/
+
