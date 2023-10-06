@@ -104,7 +104,7 @@ high.addEventListener("click", muter);
 low.addEventListener("click", muter);
 
 //for volume
-volumeRange.addEventListener("input", () => {
+volumeRange.addEventListener("input", () => {     
   //for converting % to decimal values since video.volume would accept decimals only
   let volumeValue = volumeRange.value / 100;
   myVideo.volume = volumeValue;
@@ -186,21 +186,24 @@ screenCompress.addEventListener(
   })
 );
 
-//Format time
+// Format time
 const timeFormatter = (timeInput) => {
-  let minute = Math.floor(timeInput / 60);
-  minute = minute < 10 ? "0" + minute : minute;
-  let second = Math.floor(timeInput % 60);
-  second = second < 10 ? "0" + second : second;
-  return `${minute}:${second}`;
+  let minutes = Math.floor(timeInput / 60);
+  let seconds = Math.floor(timeInput % 60);
+  const formattedTime = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+  return formattedTime;
 };
 
-//Update progress every second
+// Update progress and time every second
 setInterval(() => {
   currentTimeRef.innerHTML = timeFormatter(myVideo.currentTime);
-  currentProgress.style.width =
-    (myVideo.currentTime / myVideo.duration.toFixed(3)) * 100 + "%";
+  const duration = myVideo.duration;
+  if (!isNaN(duration)) {
+    maxDuration.innerText = timeFormatter(duration);
+    currentProgress.style.width = ((myVideo.currentTime / duration) * 100) + "%";
+  }
 }, 1000);
+
 
 //update timer
 myVideo.addEventListener("timeupdate", () => {
