@@ -59,14 +59,11 @@ playButton.addEventListener("click", () => {
   playButton.classList.add("hide");
 });
 
-pauseButton.addEventListener(
-  "click",
-  (pauseVideo = () => {
-    myVideo.pause();
-    pauseButton.classList.add("hide");
-    playButton.classList.remove("hide");
-  })
-);
+pauseButton.addEventListener("click", () => {
+  myVideo.pause();
+  pauseButton.classList.add("hide");
+  playButton.classList.remove("hide");
+});
 
 //playback
 playbackContainer.addEventListener("click", () => {
@@ -363,3 +360,11 @@ function onPlayerStateChange(event) {
 }
 */
 
+// Add a click event listener to the videoContainer
+videoContainer.addEventListener("click", () => {
+  if (myVideo.paused) {
+    myVideo.play(); // If the video is paused, play it
+  } else {
+    myVideo.pause(); // If the video is playing, pause it
+  }
+});
